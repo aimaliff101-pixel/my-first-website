@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luna Lite Resto | Bengaluru</title>
+
+<meta name="description"
+content="Luna Lite Resto - Continental, Indian, Chinese, Pizza and more in Bengaluru.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0d;
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11,11,13,.88);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #d6a85f;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 14px;
+}
+
+.nav-links a {
+    color: #ddd;
+}
+
+.nav-links a:hover {
+    color: #d6a85f;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 7% 70px;
+    background:
+        radial-gradient(circle at 75% 30%, rgba(214,168,95,.18), transparent 30%),
+        radial-gradient(circle at 15% 80%, rgba(130,70,30,.14), transparent 30%),
+        #0b0b0d;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #5f4b2f;
+    border-radius: 30px;
+    color: #d6a85f;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(48px, 9vw, 90px);
+    line-height: .95;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    color: #d6a85f;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.btn {
+    padding: 15px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: #d6a85f;
+    color: #111;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid #555;
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: #d6a85f;
+}
+
+/* STATS */
+
+.stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.stat strong {
+    display: block;
+    font-size: 25px;
+    color: #d6a85f;
+}
+
+.stat span {
+    color: #888;
+    font-size: 13px;
+}
+
+/* GENERAL */
+
+section {
+    padding: 90px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title small {
+    color: #d6a85f;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+/* MENU */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: #151518;
+    border: 1px solid #29292d;
+    border-radius: 18px;
+    padding: 25px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #d6a85f;
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 7px;
+}
+
+.card p {
+    color: #8e8e94;
+    font-size: 14px;
+}
+
+.price {
+    color: #d6a85f;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* OFFER */
+
+.offer {
+    max-width: 1100px;
+    margin: auto;
+    border-radius: 25px;
+    padding: 50px;
+    background:
+        linear-gradient(135deg, #211a11, #151518);
+    border: 1px solid #5d492c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.offer h2 {
+    font-size: 40px;
+}
+
+.offer p {
+    color: #aaa;
+}
+
+.offer-badge {
+    font-size: 45px;
+    font-weight: 900;
+    color: #d6a85f;
+    white-space: nowrap;
+}
+
+/* INFO */
+
+.info-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 20px;
+}
+
+.info {
+    padding: 25px;
+    background: #151518;
+    border-radius: 18px;
+    border: 1px solid #29292d;
+}
+
+.info-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info h3 {
+    margin-bottom: 8px;
+}
+
+.info p {
+    color: #999;
+    font-size: 14px;
+}
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    background: #111113;
+}
+
+.cta h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #999;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 7%;
+    text-align: center;
+    border-top: 1px solid #252529;
+    color: #777;
+    font-size: 13px;
+}
+
+.footer-name {
+    color: #d6a85f;
+    font-weight: bold;
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    nav {
+        padding: 16px 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+
+    .offer {
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .offer h2 {
+        font-size: 30px;
+    }
+
+    .offer-badge {
+        font-size: 38px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .cta h2 {
+        font-size: 34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">LUNA <span>LITE</span></div>
+
+    <div class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">✦ BENGALURU • EST. DINING</div>
+
+        <h1>
+            LUNA<br>
+            <span>LITE RESTO</span>
+        </h1>
+
+        <p>
+            A vibrant dining destination serving Indian favourites,
+            Chinese dishes, pizzas, biryani, burgers, momos and more.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn btn-primary"
+               href="tel:+919187099009">
+               📞 Call Restaurant
+            </a>
+
+            <a class="btn btn-outline"
+               href="https://wa.me/919187099009"
+               target="_blank">
+               💬 WhatsApp
+            </a>
+
+            <a class="btn btn-outline"
+               href="https://www.google.com/maps/search/?api=1&query=Luna+Lite+Resto+419+Maragondanahalli+Main+Road+Bengaluru"
+               target="_blank">
+               📍 Get Directions
+            </a>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>4.5★</strong>
+                <span>Dining Rating</span>
+            </div>
+
+            <div class="stat">
+                <strong>169+</strong>
+                <span>Dining Ratings</span>
+            </div>
+
+            <div class="stat">
+                <strong>₹1,000</strong>
+                <span>Approx. for two</span>
+            </div>
+
+            <div class="stat">
+                <strong>12 PM–11:30 PM</strong>
+                <span>Daily</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- MENU -->
+
+<section id="menu">
+
+    <div class="section-title">
+        <small>Explore</small>
+        <h2>Our Favourites</h2>
+    </div>
+
+    <div class="menu-grid">
+
+        <div class="card">
+            <div class="card-icon">🍗</div>
+            <h3>Tandoori Chicken</h3>
+            <p>
+                Classic char-grilled chicken marinated
+                with aromatic spices.
+            </p>
+            <div class="price">From ₹425</div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🍕</div>
+            <h3>Chicken Tikka Pizza</h3>
+            <p>
+                Smoky chicken tikka, vegetables and
+                melted mozzarella.
+            </p>
+            <div class="price">From ₹322</div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🍛</div>
+            <h3>Chicken Dum Biryani</h3>
+            <p>
+                Fragrant rice layered with aromatic
+                spices and chicken.
+            </p>
+            <div class="price">From ₹276</div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🥘</div>
+            <h3>Butter Chicken</h3>
+            <p>
+                Tender chicken in a rich,
+                creamy tomato-based gravy.
+            </p>
+            <div class="price">From ₹293</div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🧀</div>
+            <h3>Kadai Paneer</h3>
+            <p>
+                Paneer with peppers, onions and
+                spiced tomato gravy.
+            </p>
+            <div class="price">From ₹224</div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🍫</div>
+            <h3>Sizzling Brownie</h3>
+            <p>
+                Warm brownie served with ice cream
+                and chocolate sauce.
+            </p>
+            <div class="price">From ₹192</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OFFER -->
+
+<section>
+
+    <div class="offer">
+
+        <div>
+            <h2>Dining Offer</h2>
+            <p>
+                Enjoy a flat 10% OFF on your dining bill
+                through participating offers.
+            </p>
+        </div>
+
+        <div class="offer-badge">10% OFF</div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-title">
+        <small>Why Luna Lite</small>
+        <h2>Something For Everyone</h2>
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info">
+            <div class="info-icon">🍽️</div>
+            <h3>Multi-Cuisine</h3>
+            <p>
+                Indian, Chinese, South Indian, Pizza,
+                Biryani, Burgers, Momos and more.
+            </p>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">🏟️</div>
+            <h3>Live Sports</h3>
+            <p>
+                A relaxed place to enjoy food while
+                watching your favourite sports.
+            </p>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">🌙</div>
+            <h3>Evening Dining</h3>
+            <p>
+                Open daily from 12 PM until 11:30 PM.
+            </p>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">🚗</div>
+            <h3>Parking Available</h3>
+            <p>
+                Convenient dining experience with
+                parking availability.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VISIT -->
+
+<section id="visit">
+
+    <div class="section-title">
+        <small>Find Us</small>
+        <h2>Visit Luna Lite</h2>
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info">
+            <div class="info-icon">📍</div>
+            <h3>Location</h3>
+            <p>
+                419, Maragondanahalli Main Rd,<br>
+                Green Woods Layout,<br>
+                Bengaluru, Karnataka 560036
+            </p>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">🕐</div>
+            <h3>Opening Hours</h3>
+            <p>
+                Monday – Sunday<br>
+                12:00 PM – 11:30 PM
+            </p>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">📞</div>
+            <h3>Contact</h3>
+            <p>
+                +91 91870 99009
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+    <h2>Ready for a great meal?</h2>
+
+    <p>
+        Call the restaurant or open WhatsApp
+        to enquire about dining and availability.
+    </p>
+
+    <div class="buttons"
+         style="justify-content:center;">
+
+        <a class="btn btn-primary"
+           href="tel:+919187099009">
+           📞 Call Now
+        </a>
+
+        <a class="btn btn-outline"
+           href="https://wa.me/919187099009"
+           target="_blank">
+           💬 WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        <span class="footer-name">LUNA LITE RESTO</span>
+    </p>
+
+    <p>
+        Restaurant information shown here is based on
+        publicly available listings. This page is a demo concept.
+    </p>
+
+</footer>
+
+</body>
+</html>
