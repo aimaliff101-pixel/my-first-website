@@ -4,373 +4,606 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Luna Lite Resto | Bengaluru</title>
+<title>Kapoor's Cafe | KR Puram</title>
 
 <meta name="description"
-content="Luna Lite Resto - Continental, Indian, Chinese, Pizza and more in Bengaluru.">
+content="Kapoor's Cafe - Premium vegetarian Punjabi and North Indian dining in KR Puram, Bengaluru.">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0d;
-    color: #fff;
-    line-height: 1.6;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#fff;
+    line-height:1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 18px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(11,11,13,.88);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,.08);
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(8,8,8,.82);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(212,175,55,.15);
 }
 
-.logo {
-    font-size: 21px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.logo{
+    font-family:Georgia,serif;
+    font-size:22px;
+    letter-spacing:2px;
+    font-weight:bold;
 }
 
-.logo span {
-    color: #d6a85f;
+.logo span{
+    color:#d4af37;
 }
 
-.nav-links {
-    display: flex;
-    gap: 28px;
-    font-size: 14px;
+.nav-links{
+    display:flex;
+    gap:30px;
+    font-size:14px;
 }
 
-.nav-links a {
-    color: #ddd;
+.nav-links a{
+    color:#ddd;
+    transition:.3s;
 }
 
-.nav-links a:hover {
-    color: #d6a85f;
+.nav-links a:hover{
+    color:#d4af37;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 120px 7% 70px;
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:130px 7% 80px;
+
+    position:relative;
+    overflow:hidden;
+
     background:
-        radial-gradient(circle at 75% 30%, rgba(214,168,95,.18), transparent 30%),
-        radial-gradient(circle at 15% 80%, rgba(130,70,30,.14), transparent 30%),
-        #0b0b0d;
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.96) 0%,
+        rgba(0,0,0,.78) 45%,
+        rgba(0,0,0,.35) 100%
+    ),
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
 }
 
-.hero-content {
-    max-width: 750px;
+.hero-content{
+    max-width:750px;
+    position:relative;
+    z-index:2;
+    animation:fadeUp 1s ease;
 }
 
-.badge {
-    display: inline-block;
-    padding: 8px 14px;
-    border: 1px solid #5f4b2f;
-    border-radius: 30px;
-    color: #d6a85f;
-    font-size: 13px;
-    margin-bottom: 25px;
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-h1 {
-    font-size: clamp(48px, 9vw, 90px);
-    line-height: .95;
-    letter-spacing: -4px;
-    margin-bottom: 25px;
+.gold-line{
+    width:70px;
+    height:3px;
+    background:#d4af37;
+    margin-bottom:25px;
 }
 
-h1 span {
-    color: #d6a85f;
+.hero-small{
+    color:#d4af37;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:12px;
+    margin-bottom:18px;
 }
 
-.hero p {
-    max-width: 600px;
-    color: #aaa;
-    font-size: 18px;
+h1{
+    font-family:Georgia,serif;
+    font-size:clamp(48px,9vw,92px);
+    line-height:.95;
+    letter-spacing:-3px;
+    margin-bottom:28px;
 }
 
-.buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 35px;
+h1 span{
+    color:#d4af37;
 }
 
-.btn {
-    padding: 15px 24px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: .3s;
+.hero p{
+    max-width:620px;
+    color:#ddd;
+    font-size:18px;
 }
 
-.btn-primary {
-    background: #d6a85f;
-    color: #111;
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:35px;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
+.btn{
+    padding:15px 24px;
+    border-radius:4px;
+    font-weight:bold;
+    transition:.3s;
+    display:inline-block;
 }
 
-.btn-outline {
-    border: 1px solid #555;
-    color: white;
+.btn-gold{
+    background:#d4af37;
+    color:#080808;
 }
 
-.btn-outline:hover {
-    border-color: #d6a85f;
+.btn-gold:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 35px rgba(212,175,55,.25);
 }
 
-/* STATS */
-
-.stats {
-    display: flex;
-    gap: 35px;
-    margin-top: 45px;
-    flex-wrap: wrap;
+.btn-outline{
+    border:1px solid rgba(255,255,255,.4);
+    color:white;
 }
 
-.stat strong {
-    display: block;
-    font-size: 25px;
-    color: #d6a85f;
+.btn-outline:hover{
+    border-color:#d4af37;
+    color:#d4af37;
 }
 
-.stat span {
-    color: #888;
-    font-size: 13px;
+.hero-stats{
+    display:flex;
+    gap:40px;
+    margin-top:50px;
+    flex-wrap:wrap;
 }
 
-/* GENERAL */
-
-section {
-    padding: 90px 7%;
+.stat strong{
+    display:block;
+    font-size:24px;
+    color:#d4af37;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
+.stat span{
+    color:#aaa;
+    font-size:12px;
 }
 
-.section-title small {
-    color: #d6a85f;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+/* ================= GENERAL ================= */
+
+section{
+    padding:100px 7%;
 }
 
-.section-title h2 {
-    font-size: 42px;
-    margin-top: 10px;
+.section-head{
+    text-align:center;
+    margin-bottom:55px;
 }
 
-/* MENU */
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px;
-    max-width: 1100px;
-    margin: auto;
+.section-head small{
+    color:#d4af37;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:11px;
 }
 
-.card {
-    background: #151518;
-    border: 1px solid #29292d;
-    border-radius: 18px;
-    padding: 25px;
-    transition: .3s;
+.section-head h2{
+    font-family:Georgia,serif;
+    font-size:45px;
+    margin-top:12px;
 }
 
-.card:hover {
-    transform: translateY(-7px);
-    border-color: #d6a85f;
+.section-head p{
+    max-width:600px;
+    margin:15px auto 0;
+    color:#888;
 }
 
-.card-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
+/* ================= INTRO ================= */
+
+.intro{
+    background:#0d0d0d;
 }
 
-.card h3 {
-    margin-bottom: 7px;
+.intro-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.card p {
-    color: #8e8e94;
-    font-size: 14px;
-}
+.intro-image{
+    height:500px;
 
-.price {
-    color: #d6a85f;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-/* OFFER */
-
-.offer {
-    max-width: 1100px;
-    margin: auto;
-    border-radius: 25px;
-    padding: 50px;
     background:
-        linear-gradient(135deg, #211a11, #151518);
-    border: 1px solid #5d492c;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+    url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+
+    border-radius:4px;
+    position:relative;
 }
 
-.offer h2 {
-    font-size: 40px;
+.intro-image::after{
+    content:"";
+    position:absolute;
+    inset:15px;
+    border:1px solid rgba(212,175,55,.6);
 }
 
-.offer p {
-    color: #aaa;
+.intro-text small{
+    color:#d4af37;
+    letter-spacing:3px;
 }
 
-.offer-badge {
-    font-size: 45px;
-    font-weight: 900;
-    color: #d6a85f;
-    white-space: nowrap;
+.intro-text h2{
+    font-family:Georgia,serif;
+    font-size:45px;
+    margin:15px 0;
 }
 
-/* INFO */
-
-.info-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-    gap: 20px;
+.intro-text p{
+    color:#999;
+    margin-bottom:18px;
 }
 
-.info {
-    padding: 25px;
-    background: #151518;
-    border-radius: 18px;
-    border: 1px solid #29292d;
+.highlight{
+    color:#d4af37;
 }
 
-.info-icon {
-    font-size: 28px;
-    margin-bottom: 10px;
+/* ================= MENU ================= */
+
+.menu{
+    background:#080808;
 }
 
-.info h3 {
-    margin-bottom: 8px;
+.menu-grid{
+    max-width:1150px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.info p {
-    color: #999;
-    font-size: 14px;
+.menu-card{
+    background:#111;
+    border:1px solid #242424;
+    padding:28px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
 }
 
-/* CTA */
-
-.cta {
-    text-align: center;
-    background: #111113;
+.menu-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:0;
+    height:2px;
+    background:#d4af37;
+    transition:.4s;
 }
 
-.cta h2 {
-    font-size: 45px;
-    margin-bottom: 15px;
+.menu-card:hover{
+    transform:translateY(-8px);
+    border-color:#554718;
 }
 
-.cta p {
-    color: #999;
-    max-width: 600px;
-    margin: auto;
+.menu-card:hover::before{
+    width:100%;
 }
 
-/* FOOTER */
-
-footer {
-    padding: 35px 7%;
-    text-align: center;
-    border-top: 1px solid #252529;
-    color: #777;
-    font-size: 13px;
+.menu-icon{
+    font-size:35px;
+    margin-bottom:15px;
 }
 
-.footer-name {
-    color: #d6a85f;
-    font-weight: bold;
+.menu-card h3{
+    font-family:Georgia,serif;
+    font-size:23px;
 }
 
-/* MOBILE */
+.menu-card p{
+    color:#888;
+    font-size:14px;
+    margin-top:8px;
+}
 
-@media(max-width:700px) {
+.price{
+    color:#d4af37;
+    margin-top:18px;
+    font-weight:bold;
+}
 
-    nav {
-        padding: 16px 5%;
+/* ================= EXPERIENCE ================= */
+
+.experience{
+    background:
+    linear-gradient(rgba(0,0,0,.83),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85")
+    center/cover fixed;
+}
+
+.experience-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.experience-box h2{
+    font-family:Georgia,serif;
+    font-size:50px;
+}
+
+.experience-box p{
+    color:#ccc;
+    max-width:650px;
+    margin:20px auto;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    background:#0d0d0d;
+}
+
+.features-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feature{
+    padding:30px;
+    background:#111;
+    border:1px solid #242424;
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    font-family:Georgia,serif;
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#888;
+    font-size:14px;
+}
+
+/* ================= OFFER ================= */
+
+.offer{
+    max-width:1050px;
+    margin:auto;
+
+    padding:55px;
+
+    border:1px solid #604f1a;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1b1609,
+        #0d0d0d
+    );
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.offer small{
+    color:#d4af37;
+    letter-spacing:4px;
+}
+
+.offer h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+    margin-top:10px;
+}
+
+.offer p{
+    color:#999;
+    margin-top:8px;
+}
+
+.offer-number{
+    font-size:70px;
+    font-weight:bold;
+    color:#d4af37;
+}
+
+/* ================= VISIT ================= */
+
+.visit{
+    background:#080808;
+}
+
+.visit-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.visit-card{
+    padding:30px;
+    background:#111;
+    border:1px solid #242424;
+}
+
+.visit-icon{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.visit-card h3{
+    font-family:Georgia,serif;
+    margin-bottom:10px;
+}
+
+.visit-card p{
+    color:#999;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.86),rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=80")
+    center/cover;
+}
+
+.cta h2{
+    font-family:Georgia,serif;
+    font-size:50px;
+}
+
+.cta p{
+    color:#aaa;
+    max-width:600px;
+    margin:15px auto;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:40px 7%;
+    background:#050505;
+    border-top:1px solid #222;
+    text-align:center;
+    color:#666;
+    font-size:12px;
+}
+
+.footer-logo{
+    color:#d4af37;
+    font-family:Georgia,serif;
+    font-size:20px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    nav{
+        padding:16px 5%;
     }
 
-    .nav-links {
-        display: none;
+    .nav-links{
+        display:none;
     }
 
-    .hero {
-        padding-left: 6%;
-        padding-right: 6%;
+    .hero{
+        padding:130px 6% 70px;
+        min-height:100svh;
     }
 
-    section {
-        padding: 70px 6%;
+    h1{
+        font-size:58px;
     }
 
-    .offer {
-        padding: 30px;
-        flex-direction: column;
-        align-items: flex-start;
+    .hero p{
+        font-size:16px;
     }
 
-    .offer h2 {
-        font-size: 30px;
+    section{
+        padding:75px 6%;
     }
 
-    .offer-badge {
-        font-size: 38px;
+    .section-head h2{
+        font-size:35px;
     }
 
-    .section-title h2 {
-        font-size: 32px;
+    .intro-grid{
+        grid-template-columns:1fr;
     }
 
-    .cta h2 {
-        font-size: 34px;
+    .intro-image{
+        height:380px;
+    }
+
+    .intro-text h2{
+        font-size:36px;
+    }
+
+    .experience-box h2{
+        font-size:38px;
+    }
+
+    .offer{
+        padding:35px 25px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .offer-number{
+        font-size:55px;
+    }
+
+    .cta h2{
+        font-size:38px;
     }
 }
+
 </style>
 </head>
 
@@ -379,14 +612,18 @@ footer {
 <!-- NAVIGATION -->
 
 <nav>
-    <div class="logo">LUNA <span>LITE</span></div>
+
+    <div class="logo">
+        KAPOOR'S <span>CAFE</span>
+    </div>
 
     <div class="nav-links">
-        <a href="#menu">Menu</a>
         <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
         <a href="#visit">Visit</a>
-        <a href="#contact">Contact</a>
     </div>
+
 </nav>
 
 
@@ -396,59 +633,59 @@ footer {
 
     <div class="hero-content">
 
-        <div class="badge">✦ BENGALURU • EST. DINING</div>
+        <div class="gold-line"></div>
+
+        <div class="hero-small">
+            Punjabi • Vegetarian • Bengaluru
+        </div>
 
         <h1>
-            LUNA<br>
-            <span>LITE RESTO</span>
+            KAPOOR'S<br>
+            <span>CAFE</span>
         </h1>
 
         <p>
-            A vibrant dining destination serving Indian favourites,
-            Chinese dishes, pizzas, biryani, burgers, momos and more.
+            A warm Punjabi-inspired dining experience in
+            KR Puram, Bengaluru — bringing together generous
+            flavours, comforting food and a welcoming atmosphere.
         </p>
 
         <div class="buttons">
 
-            <a class="btn btn-primary"
-               href="tel:+919187099009">
-               📞 Call Restaurant
+            <a class="btn btn-gold"
+               href="tel:+919379926777">
+                CALL US
             </a>
 
             <a class="btn btn-outline"
-               href="https://wa.me/919187099009"
+               href="https://wa.me/919379926777"
                target="_blank">
-               💬 WhatsApp
+                WHATSAPP
             </a>
 
             <a class="btn btn-outline"
-               href="https://www.google.com/maps/search/?api=1&query=Luna+Lite+Resto+419+Maragondanahalli+Main+Road+Bengaluru"
+               href="https://www.google.com/maps/search/?api=1&query=Kapoor's+Cafe+44%2F2+Old+Madras+Road+KR+Puram+Bengaluru"
                target="_blank">
-               📍 Get Directions
+                DIRECTIONS
             </a>
 
         </div>
 
-        <div class="stats">
+        <div class="hero-stats">
 
             <div class="stat">
-                <strong>4.5★</strong>
-                <span>Dining Rating</span>
+                <strong>3.8★</strong>
+                <span>Google rating shown</span>
             </div>
 
             <div class="stat">
-                <strong>169+</strong>
-                <span>Dining Ratings</span>
+                <strong>980+</strong>
+                <span>Reviews shown</span>
             </div>
 
             <div class="stat">
-                <strong>₹1,000</strong>
-                <span>Approx. for two</span>
-            </div>
-
-            <div class="stat">
-                <strong>12 PM–11:30 PM</strong>
-                <span>Daily</span>
+                <strong>₹200–600</strong>
+                <span>Price range shown</span>
             </div>
 
         </div>
@@ -458,75 +695,288 @@ footer {
 </header>
 
 
+<!-- ABOUT -->
+
+<section class="intro" id="about">
+
+    <div class="intro-grid">
+
+        <div class="intro-image"></div>
+
+        <div class="intro-text">
+
+            <small>THE KAPOOR'S EXPERIENCE</small>
+
+            <h2>
+                Comfort food.
+                <span class="highlight">
+                    Punjabi soul.
+                </span>
+            </h2>
+
+            <p>
+                Kapoor's Cafe brings a colourful Punjabi-inspired
+                dining experience to KR Puram, Bengaluru.
+            </p>
+
+            <p>
+                The public listings describe the cafe as a
+                vegetarian destination featuring North Indian,
+                fast food, street food and desserts.
+            </p>
+
+            <p>
+                Whether you're meeting friends, enjoying a family
+                meal or stopping by for your favourite paratha
+                and lassi, the cafe is designed around generous,
+                familiar flavours.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- MENU -->
 
-<section id="menu">
+<section class="menu" id="menu">
 
-    <div class="section-title">
-        <small>Explore</small>
-        <h2>Our Favourites</h2>
+    <div class="section-head">
+
+        <small>From the kitchen</small>
+
+        <h2>Signature Favourites</h2>
+
+        <p>
+            A selection inspired by dishes publicly associated
+            with Kapoor's Cafe.
+        </p>
+
     </div>
+
 
     <div class="menu-grid">
 
-        <div class="card">
-            <div class="card-icon">🍗</div>
-            <h3>Tandoori Chicken</h3>
+        <div class="menu-card">
+
+            <div class="menu-icon">🥟</div>
+
+            <h3>Paneer Tikka</h3>
+
             <p>
-                Classic char-grilled chicken marinated
-                with aromatic spices.
+                A classic North Indian favourite with
+                spiced paneer and smoky flavours.
             </p>
-            <div class="price">From ₹425</div>
+
+            <div class="price">
+                SIGNATURE
+            </div>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">🍕</div>
-            <h3>Chicken Tikka Pizza</h3>
+
+        <div class="menu-card">
+
+            <div class="menu-icon">🌽</div>
+
+            <h3>Crispy Corn</h3>
+
             <p>
-                Smoky chicken tikka, vegetables and
-                melted mozzarella.
+                A crunchy starter highlighted among
+                the cafe's popular dishes.
             </p>
-            <div class="price">From ₹322</div>
+
+            <div class="price">
+                POPULAR
+            </div>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">🍛</div>
-            <h3>Chicken Dum Biryani</h3>
+
+        <div class="menu-card">
+
+            <div class="menu-icon">🫓</div>
+
+            <h3>Punjabi Parathas</h3>
+
             <p>
-                Fragrant rice layered with aromatic
-                spices and chicken.
+                Comforting stuffed breads inspired by
+                traditional Punjabi cuisine.
             </p>
-            <div class="price">From ₹276</div>
+
+            <div class="price">
+                HOUSE FAVOURITE
+            </div>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">🥘</div>
-            <h3>Butter Chicken</h3>
+
+        <div class="menu-card">
+
+            <div class="menu-icon">🥛</div>
+
+            <h3>Lassi</h3>
+
             <p>
-                Tender chicken in a rich,
-                creamy tomato-based gravy.
+                A refreshing Punjabi classic to pair
+                with a hearty meal.
             </p>
-            <div class="price">From ₹293</div>
+
+            <div class="price">
+                CLASSIC
+            </div>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">🧀</div>
-            <h3>Kadai Paneer</h3>
+
+        <div class="menu-card">
+
+            <div class="menu-icon">🍛</div>
+
+            <h3>Dal Makhani</h3>
+
             <p>
-                Paneer with peppers, onions and
-                spiced tomato gravy.
+                Rich, comforting North Indian flavours
+                perfect with breads or rice.
             </p>
-            <div class="price">From ₹224</div>
+
+            <div class="price">
+                NORTH INDIAN
+            </div>
+
         </div>
 
-        <div class="card">
-            <div class="card-icon">🍫</div>
-            <h3>Sizzling Brownie</h3>
+
+        <div class="menu-card">
+
+            <div class="menu-icon">🍮</div>
+
+            <h3>Indian Desserts</h3>
+
             <p>
-                Warm brownie served with ice cream
-                and chocolate sauce.
+                Finish your meal with a selection of
+                traditional sweet treats.
             </p>
-            <div class="price">From ₹192</div>
+
+            <div class="price">
+                DESSERT
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+    <div class="experience-box">
+
+        <div class="section-head">
+
+            <small>More than a meal</small>
+
+            <h2>
+                A place to slow down.
+            </h2>
+
+        </div>
+
+        <p>
+            Warm interiors, Punjabi-inspired atmosphere,
+            family-friendly dining and generous food make
+            Kapoor's Cafe a casual destination for lunch,
+            dinner and relaxed gatherings.
+        </p>
+
+        <div class="buttons"
+             style="justify-content:center;">
+
+            <a class="btn btn-gold"
+               href="#visit">
+                PLAN YOUR VISIT
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="section-head">
+
+        <small>Made for everyone</small>
+
+        <h2>Why Visit?</h2>
+
+    </div>
+
+
+    <div class="features-grid">
+
+        <div class="feature">
+
+            <div class="feature-icon">🌱</div>
+
+            <h3>Vegetarian</h3>
+
+            <p>
+                Public listings identify the outlet
+                as vegetarian.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">👨‍👩‍👧‍👦</div>
+
+            <h3>Family Friendly</h3>
+
+            <p>
+                A casual destination suitable for
+                families and groups.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">🎵</div>
+
+            <h3>Good Music</h3>
+
+            <p>
+                Listings highlight the atmosphere
+                and music as part of the experience.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">🥘</div>
+
+            <h3>North Indian</h3>
+
+            <p>
+                Punjabi and North Indian favourites
+                form the heart of the menu.
+            </p>
+
         </div>
 
     </div>
@@ -541,64 +991,22 @@ footer {
     <div class="offer">
 
         <div>
-            <h2>Dining Offer</h2>
+
+            <small>DINING</small>
+
+            <h2>
+                Make your next meal memorable.
+            </h2>
+
             <p>
-                Enjoy a flat 10% OFF on your dining bill
-                through participating offers.
+                Check current offers and availability
+                directly with the restaurant.
             </p>
+
         </div>
 
-        <div class="offer-badge">10% OFF</div>
-
-    </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-    <div class="section-title">
-        <small>Why Luna Lite</small>
-        <h2>Something For Everyone</h2>
-    </div>
-
-    <div class="info-grid">
-
-        <div class="info">
-            <div class="info-icon">🍽️</div>
-            <h3>Multi-Cuisine</h3>
-            <p>
-                Indian, Chinese, South Indian, Pizza,
-                Biryani, Burgers, Momos and more.
-            </p>
-        </div>
-
-        <div class="info">
-            <div class="info-icon">🏟️</div>
-            <h3>Live Sports</h3>
-            <p>
-                A relaxed place to enjoy food while
-                watching your favourite sports.
-            </p>
-        </div>
-
-        <div class="info">
-            <div class="info-icon">🌙</div>
-            <h3>Evening Dining</h3>
-            <p>
-                Open daily from 12 PM until 11:30 PM.
-            </p>
-        </div>
-
-        <div class="info">
-            <div class="info-icon">🚗</div>
-            <h3>Parking Available</h3>
-            <p>
-                Convenient dining experience with
-                parking availability.
-            </p>
+        <div class="offer-number">
+            100%
         </div>
 
     </div>
@@ -608,41 +1016,89 @@ footer {
 
 <!-- VISIT -->
 
-<section id="visit">
+<section class="visit" id="visit">
 
-    <div class="section-title">
-        <small>Find Us</small>
-        <h2>Visit Luna Lite</h2>
+    <div class="section-head">
+
+        <small>Find us</small>
+
+        <h2>Visit Kapoor's Cafe</h2>
+
     </div>
 
-    <div class="info-grid">
 
-        <div class="info">
-            <div class="info-icon">📍</div>
+    <div class="visit-grid">
+
+
+        <div class="visit-card">
+
+            <div class="visit-icon">📍</div>
+
             <h3>Location</h3>
+
             <p>
-                419, Maragondanahalli Main Rd,<br>
-                Green Woods Layout,<br>
+                44/2, Old Madras Road,<br>
+                Near Subregistrar Office,<br>
+                Chikkabasavanapura,<br>
+                Krishnarajapuram,<br>
                 Bengaluru, Karnataka 560036
             </p>
+
         </div>
 
-        <div class="info">
-            <div class="info-icon">🕐</div>
+
+        <div class="visit-card">
+
+            <div class="visit-icon">🕐</div>
+
             <h3>Opening Hours</h3>
+
             <p>
-                Monday – Sunday<br>
-                12:00 PM – 11:30 PM
+                Monday – Thursday<br>
+                11:00 AM – 11:00 PM
+                <br><br>
+                Friday – Sunday<br>
+                9:00 AM – 11:00 PM
             </p>
+
         </div>
 
-        <div class="info">
-            <div class="info-icon">📞</div>
+
+        <div class="visit-card">
+
+            <div class="visit-icon">📞</div>
+
             <h3>Contact</h3>
+
             <p>
-                +91 91870 99009
+                +91 93799 26777
             </p>
+
+            <div class="buttons">
+
+                <a class="btn btn-gold"
+                   href="tel:+919379926777">
+                    CALL
+                </a>
+
+            </div>
+
         </div>
+
+
+    </div>
+
+
+    <div class="buttons"
+         style="justify-content:center;margin-top:35px;">
+
+        <a class="btn btn-gold"
+           href="https://www.google.com/maps/search/?api=1&query=Kapoor's+Cafe+44%2F2+Old+Madras+Road+KR+Puram+Bengaluru"
+           target="_blank">
+
+            📍 OPEN GOOGLE MAPS
+
+        </a>
 
     </div>
 
@@ -651,27 +1107,34 @@ footer {
 
 <!-- CTA -->
 
-<section class="cta" id="contact">
+<section class="cta">
 
-    <h2>Ready for a great meal?</h2>
+    <div class="gold-line"
+         style="margin:0 auto 25px;"></div>
+
+    <h2>
+        Come hungry.
+        <br>
+        Leave happy.
+    </h2>
 
     <p>
-        Call the restaurant or open WhatsApp
-        to enquire about dining and availability.
+        Discover Punjabi-inspired vegetarian food
+        in the heart of KR Puram.
     </p>
 
     <div class="buttons"
          style="justify-content:center;">
 
-        <a class="btn btn-primary"
-           href="tel:+919187099009">
-           📞 Call Now
+        <a class="btn btn-gold"
+           href="tel:+919379926777">
+            📞 CALL NOW
         </a>
 
         <a class="btn btn-outline"
-           href="https://wa.me/919187099009"
+           href="https://wa.me/919379926777"
            target="_blank">
-           💬 WhatsApp
+            💬 WHATSAPP
         </a>
 
     </div>
@@ -679,18 +1142,25 @@ footer {
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-    <p>
-        <span class="footer-name">LUNA LITE RESTO</span>
-    </p>
+    <div class="footer-logo">
+        KAPOOR'S CAFE
+    </div>
 
     <p>
-        Restaurant information shown here is based on
-        publicly available listings. This page is a demo concept.
+        KR Puram • Bengaluru
+    </p>
+
+    <p style="margin-top:10px;">
+        Demo website concept based on publicly available
+        restaurant information.
     </p>
 
 </footer>
+
 
 </body>
 </html>
